@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMD Terminal System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terminal-system">
+        <div class="terminal-header">
+            <div class="terminal-logo">
+                <img src="terminal-icon.png" alt="Terminal Icon" class="terminal-icon">
+                <span>CMD Terminal System</span>
+            </div>
+            <div class="connection-status">
+                <span class="status-indicator disconnected"></span>
+                <span class="status-text">Disconnected</span>
+            </div>
+        </div>
+        
+        <div class="terminal-toolbar">
+            <button id="newTerminalBtn" class="toolbar-btn">+ New Terminal</button>
+            <button id="prevTerminalBtn" class="toolbar-btn">← Previous</button>
+            <button id="nextTerminalBtn" class="toolbar-btn">→ Next</button>
+        </div>
+        
+        <div class="terminal-container">
+            <!-- Terminal windows will be dynamically added here -->
+        </div>
+        
+        <div class="terminal-controls">
+            <button id="stopCommandBtn" class="control-btn stop-btn">
+                <span class="btn-icon">■</span> Stop Command
+            </button>
+            <button id="clearTerminalBtn" class="control-btn clear-btn">
+                <span class="btn-icon">⌧</span> Clear Terminal
+            </button>
+            <button id="renameTerminalBtn" class="control-btn rename-btn">
+                <span class="btn-icon">✎</span> Rename Terminal
+            </button>
+            <button id="closeTerminalBtn" class="control-btn close-btn">
+                <span class="btn-icon">✕</span> Close Terminal
+            </button>
+        </div>
+        
+        <div class="client-connection">
+            <div class="client-url-label">Client URL:</div>
+            <input type="text" id="clientUrlInput" class="client-url-input" value="http://localhost:8082" readonly>
+            <button id="connectBtn" class="connect-btn">Connect</button>
+            <button id="disconnectBtn" class="disconnect-btn">Disconnect</button>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <template id="terminal-template">
+        <div class="terminal-window" data-terminal-id="">
+            <div class="terminal-output"></div>
+            <div class="terminal-input-line">
+                <span class="prompt">></span>
+                <input type="text" class="terminal-input" placeholder="Type command here...">
+            </div>
+        </div>
+    </template>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

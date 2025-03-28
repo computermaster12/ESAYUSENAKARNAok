@@ -1,0 +1,259 @@
+/* Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-system {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #0c0c0c;
+    border: 1px solid #444;
+}
+
+/* Header */
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0c0c0c;
+    padding: 8px 15px;
+    border-bottom: 1px solid #444;
+}
+
+.terminal-logo {
+    display: flex;
+    align-items: center;
+}
+
+.terminal-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.connection-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.disconnected {
+    background-color: #ff3333;
+}
+
+.connected {
+    background-color: #33cc33;
+}
+
+/* Toolbar */
+.terminal-toolbar {
+    display: flex;
+    background-color: #1a1a1a;
+    padding: 8px;
+    border-bottom: 1px solid #444;
+}
+
+.toolbar-btn {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    padding: 6px 12px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.toolbar-btn:hover {
+    background-color: #3a3a3a;
+}
+
+.toolbar-btn:active {
+    background-color: #444;
+}
+
+/* Terminal Container */
+.terminal-container {
+    flex: 1;
+    overflow: auto;
+    background-color: #0c0c0c;
+    position: relative;
+}
+
+.terminal-window {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: #f0f0f0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #0c0c0c;
+}
+
+.prompt {
+    color: #33cc33;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.terminal-input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: #f0f0f0;
+    font-size: 14px;
+    outline: none;
+    caret-color: #f0f0f0;
+}
+
+/* Terminal Controls */
+.terminal-controls {
+    display: flex;
+    background-color: #1a1a1a;
+    padding: 8px;
+    border-top: 1px solid #444;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    padding: 6px 12px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.control-btn:hover {
+    background-color: #3a3a3a;
+}
+
+.control-btn:active {
+    background-color: #444;
+}
+
+.btn-icon {
+    margin-right: 5px;
+}
+
+.stop-btn {
+    background-color: #8b0000;
+}
+
+.stop-btn:hover {
+    background-color: #a00000;
+}
+
+.clear-btn {
+    background-color: #00008b;
+}
+
+.clear-btn:hover {
+    background-color: #0000a0;
+}
+
+/* Client Connection */
+.client-connection {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 8px;
+    border-top: 1px solid #444;
+}
+
+.client-url-label {
+    margin-right: 10px;
+}
+
+.client-url-input {
+    flex: 1;
+    background-color: #0c0c0c;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    padding: 6px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.connect-btn {
+    background-color: #006400;
+    color: #f0f0f0;
+    border: 1px solid #008000;
+    padding: 6px 12px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.connect-btn:hover {
+    background-color: #008000;
+}
+
+.disconnect-btn {
+    background-color: #8b0000;
+    color: #f0f0f0;
+    border: 1px solid #a00000;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.disconnect-btn:hover {
+    background-color: #a00000;
+}
+
+/* Command Styles */
+.command-line {
+    margin: 2px 0;
+}
+
+.command-input {
+    color: #33cc33;
+}
+
+.command-output {
+    color: #f0f0f0;
+}
+
+.command-error {
+    color: #ff3333;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
